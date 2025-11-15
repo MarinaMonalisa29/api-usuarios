@@ -1,7 +1,0 @@
-api-usuarios/
-└─ prints/
-      ├─ get-usuarios.png
-      ├─ post-usuarios.png
-      ├─ get-usuarios-depois.png
-      ├─ put-usuarios.png
-      └─ delete-usuarios.png
