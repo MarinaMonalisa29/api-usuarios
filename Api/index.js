@@ -13,13 +13,11 @@ function saveDB(data) {
   fs.writeFileSync("db.json", JSON.stringify(data, null, 2));
 }
 
-// GET /usuarios
 app.get("/usuarios", (req, res) => {
   const db = loadDB();
   res.json(db.usuarios);
 });
 
-// POST /usuarios
 app.post("/usuarios", (req, res) => {
   const db = loadDB();
   const novo = {
@@ -32,7 +30,6 @@ app.post("/usuarios", (req, res) => {
   res.status(201).json(novo);
 });
 
-// PUT /usuarios/:id
 app.put("/usuarios/:id", (req, res) => {
   const db = loadDB();
   const id = parseInt(req.params.id);
@@ -47,7 +44,6 @@ app.put("/usuarios/:id", (req, res) => {
   res.json(usuario);
 });
 
-// DELETE /usuarios/:id
 app.delete("/usuarios/:id", (req, res) => {
   const db = loadDB();
   const id = parseInt(req.params.id);
@@ -58,5 +54,5 @@ app.delete("/usuarios/:id", (req, res) => {
   res.json({ message: "Usuário removido" });
 });
 
-// Servidor
 app.listen(3000, () => console.log("API rodando em http://localhost:3000"));
+
